@@ -6,6 +6,7 @@ class Api::FortunesController < ApplicationController
   end
 
   def fortune_2
+    @lotto_numbers = "#{rand(60)},#{rand(60)},#{rand(60)},#{rand(60)},#{rand(60)},#{rand(60)}"
     render 'fortune_2.json.jbuilder'
   end
 
