@@ -10,6 +10,13 @@ class Api::FortunesController < ApplicationController
     render 'fortune_2.json.jbuilder'
   end
 
+  $counter = 0
+  def page_counter
+    $counter += 1
+    render 'page_count.json.jbuilder'
+
+  end
+
   def fortune_3
     @song =""
     beer = 99

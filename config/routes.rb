@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   get '/fortune_1' => 'api/fortunes#fortune_1'
   get '/fortune_2' => 'api/fortunes#fortune_2'
   get '/fortune_3' => 'api/fortunes#fortune_3'
-end
+  get '/page_count' => 'api/fortunes#page_counter'
+ end
