@@ -10,11 +10,12 @@ class Api::FortunesController < ApplicationController
     render 'fortune_2.json.jbuilder'
   end
 
-  $counter = 0
+  # $counter = 0
   def page_counter
-    $counter += 1
+    page_number = PageCount.new
+    page_number.save
+    @counter = page_number.id.to_i
     render 'page_count.json.jbuilder'
-
   end
 
   def fortune_3

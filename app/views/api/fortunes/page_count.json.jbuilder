@@ -1,1 +1,1 @@
-json.page_count $counter
+json.page_count @counter
