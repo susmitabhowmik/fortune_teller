@@ -18,18 +18,18 @@ class Api::FortunesController < ApplicationController
     render 'page_count.json.jbuilder'
   end
 
-  def fortune_3
+  def ninety_nine_bottles_of_beer
     @song =""
     beer = 99
     99.times do
       if beer == 2
-          p "#{beer} bottles of beer on the wall, #{beer} bottles of beer. Take one down and pass it around #{beer-1} bottle of beer on the wall."
+          @song +="#{beer} bottles of beer on the wall, #{beer} bottles of beer. Take one down and pass it around #{beer-1} bottle of beer on the wall."
         elsif beer == 1
-          p "#{beer} bottles of beer on the wall, #{beer} bottle of beer. Take one down and pass it around #{beer-1} bottles of beer on the wall."
+          @song += "#{beer} bottles of beer on the wall, #{beer} bottle of beer. Take one down and pass it around #{beer-1} bottles of beer on the wall."
         elsif beer == 0
-          p "No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
+          @song += "No more bottles of beer on the wall, no more bottles of beer. Go to the store and buy some more, 99 bottles of beer on the wall."
         else
-         p "#{beer} bottles of beer on the wall, #{beer} bottles of beer. Take one down and pass it around #{beer-1} bottles of beer on the wall."
+         @song += "#{beer} bottles of beer on the wall, #{beer} bottles of beer. Take one down and pass it around #{beer-1} bottles of beer on the wall."
        end
        beer -= 1
     end

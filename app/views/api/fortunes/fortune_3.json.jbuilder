@@ -1,1 +1,1 @@
-json.fortune_3 "hello"
+json.song_lyrics @song
