@@ -1,0 +1,1 @@
+json.fortune_3 "hello"
